@@ -1,0 +1,61 @@
+---
+title: "Workshop on time-varying parameters models"
+format: html
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+<!-- Place this tag in your head or just before your close body tag. -->
+
+```{=html}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+```
+
+<img src="misc/banner_image3.png" alt="AI generated banner image" class="center" width="100%"/>
+
+<!-- Place this tag where you want the button to render. -->
+
+<a class="github-button" href="https://github.com/mattiasvillani/TimeVaryingParametersWorkshop" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star mattiasvillani/Intro2Git on GitHub">Star</a>
+
+> Half-day workshop at University of Technology Sydney (UTS)
+
+### Aim
+
+The aim of the workshop is to give a introduction to time-varying parameter models and Bayesian inference for such models, with an outlook to some new developments. The workshop consists of lectures on the models, theory and computations, with some light demos in R. The participants are expected to leave the workshop with enough knowledge to solve the computer lab exercises by themselves after the workshop.
+
+### Instructor
+
+<img src="/misc/villani_foto.jpg" width="15%"/>\
+[Mattias Villani](https://mattiasvillani.com)<br> Professor of
+Statistics<br> Stockholm University
+
+### Before the workshop
+
+It is not necessary to bring your own laptop, but if you want to follow along in the demos, participants are encouraged to download:
+
+-   Install R and RStudio
+-   Install the `dlm` package in R
+
+### Plan and material
+
+------------------------------------------------------------------------
+
+**Lecture 1 - Time-varying parameter models and state-space models**<br> 
+Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides - TBA]()<br>
+Interactivity: [local level](https://observablehq.com/@mattiasvillani/local-level-model) | [local trend](https://observablehq.com/@mattiasvillani/local-trend-model) | [time-varying regression](https://observablehq.com/@mattiasvillani/time-varying-regression-model) 
+
+**Lecture 2 - Inference in linear Gaussian models**<br> 
+Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides - TBA]()<br>
+Interactivity: [filtering local level](https://observablehq.com/@mattiasvillani/kalman-filter-simulated-local-level) | [nile river data](https://observablehq.com/@mattiasvillani/kalman-filtering-nile-river-data)
+
+**Lecture 3 - Inference in non-linear and non-Gaussian models**<br> 
+Reading: [Slides - TBA]()<br>
+Interactivity: [poisson time series](https://observablehq.com/@mattiasvillani/poisson-time-series-model) | [stochastic volatility](https://observablehq.com/@mattiasvillani/stochastic-volatility-time-series-model)
+
+**Lecture 4 - Global-local shrinkage processes for more realistic parameter evolutions**<br> 
+Reading: [Slides - TBA]()<br>
+Interactivity: [local level model with dsp prior](https://observablehq.com/@mattiasvillani/local-level-model-dsp-prior) | [poisson with dsp prior](https://observablehq.com/@mattiasvillani/time-varying-poisson-dsp)
+
+**Computer lab**<br>
+[computer lab - TBA]()
