@@ -1,5 +1,5 @@
 ---
-title: "Workshop on time-varying parameters models"
+title: "Workshop on time-varying parameter models"
 format: html
 editor: 
   markdown: 
@@ -22,7 +22,7 @@ editor:
 
 ### Aim
 
-The aim of the workshop is to give a introduction to time-varying parameter models and Bayesian inference for such models, with an outlook to some new developments. The workshop consists of lectures on the models, theory and computations, with some light demos in R. The participants are expected to leave the workshop with enough knowledge to solve the computer lab exercises by themselves after the workshop.
+The aim of the workshop is to give an introduction to time-varying parameter models and Bayesian inference for such models, with an outlook to some new developments. The workshop consists of lectures on the models, theory and computations, with some light demos in R. The participants are expected to leave the workshop with enough knowledge to solve the computer lab exercises by themselves after the workshop.
 
 ### Instructor
 
