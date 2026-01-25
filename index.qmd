@@ -32,7 +32,7 @@ Statistics<br> Stockholm University
 
 ### Before the workshop
 
-It is not necessary to bring your own laptop, but if you want to follow along in the demos, participants are encouraged to download:
+It is not necessary to bring your own laptop, but if you want to follow along in the demos, participants are encouraged to:
 
 -   Install R and RStudio
 -   Install the `dlm` package in R
