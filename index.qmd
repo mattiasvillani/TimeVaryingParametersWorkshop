@@ -30,6 +30,12 @@ The aim of the workshop is to give an introduction to time-varying parameter mod
 [Mattias Villani](https://mattiasvillani.com)<br> Professor of
 Statistics<br> Stockholm University
 
+### Prerequisites
+
+- Basic knowledge of Bayesian statistics is assumed. 
+- Familiarity with Markov Chain Monte Carlo (MCMC) is needed for some parts of the workshop. 
+- Basic knowledge of R is needed to follow along in the demos (although this is a small part of the workshop).
+
 ### Before the workshop
 
 It is not necessary to bring your own laptop, but if you want to follow along in the demos, participants are encouraged to:
