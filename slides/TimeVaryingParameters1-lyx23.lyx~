@@ -1,0 +1,2739 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+
+
+% you can play with different themes and color themes to find your favorite combination.
+\mode<presentation> {
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \beamertemplatenavigationsymbolsempty
+ 
+}
+
+\usepackage{mathtools}
+\usepackage{graphicx} % for including images
+\usepackage{pgf} % for logo
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{emoji}
+\usepackage{listings}
+\usepackage[many]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\tcbuselibrary{skins}
+%\usepackage{fdsymbol} % for card symbols
+
+
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\tcbset{tab2/.style={enhanced, fontupper=\small,
+colback=lightgray!10!white,colframe=cobalt!50!black,colbacktitle=lightsteelblue!40!white,
+coltitle=black,center title}}
+
+\newcommand\boldblue[1]{\textcolor{cobalt}{\textbf{#1}}}
+\newcommand\boldorange[1]{\textcolor{burntoranger}{\textbf{#1}}}
+\def\*#1{\mathbf{#1}}
+
+\date{} % Date, can be changed to a custom date
+
+\titlegraphic{
+\vspace{-0.6cm}
+\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
+
+
+\tiny
+\vspace{1cm}
+\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
+\href{https://bsky.app/profile/matvil.bsky.social}{\includegraphics[width=0.3cm]{/misc/bluesky.png} @matvil}\hspace*{1cm}~
+\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
+\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
+}
+
+
+\definecolor{blue}{RGB}{38, 122, 181}
+\definecolor{orange}{RGB}{255, 128, 0}
+\definecolor{lorange}{RGB}{255, 178, 102}
+\definecolor{llorange}{RGB}{255, 229,204 }
+\definecolor{verylightgray}{RGB}{246, 246, 246}
+\definecolor{cobalt}{HTML}{0047AB}
+\definecolor{lightsteelblue}{HTML}{b0c4de}
+
+\definecolor{shadecolor}{rgb}{236, 236, 236}
+
+\setbeamertemplate{itemize item}{\color{orange}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
+\usepackage{tcolorbox}
+
+
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\setbeamertemplate{footline}{}
+\end_preamble
+\options xcolor=svgnames
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\boxbgcolor #bfbc40
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\size largest
+\color orange
+Locally Stable Time-Varying Multi-Seasonal ARMA Models 
+\size default
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\color gray
+BayesComp 2025
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2.7cm}
+\backslash
+insertframenumber/
+\backslash
+inserttotalframenumber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Mattias Villani
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color gray
+Mattias Villani
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+
+\series bold
+Department of Statistics
+\begin_inset Newline newline
+\end_inset
+
+Stockholm University
+\series default
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Stockholm University
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Collaborators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Ganna Fagerberg
+\series default
+\color black
+ (lead author), Stockholm University
+\series bold
+\color blue
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Robert Kohn
+\series default
+\color inherit
+, 
+\color black
+University of New South Wales
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Structure of the talk
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Time-varying multi-seasonal AR models
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Parameter evolution process
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Bayesian inference 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Simulation experiments
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Application
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Slides
+\series default
+\color inherit
+: 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "http://mattiasvillani.com/news"
+target "http://mattiasvillani.com/news"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Paper
+\series default
+\color inherit
+: 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "arXiv: 2409.18640"
+target "https://arxiv.org/abs/2409.18640"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color black
+ (ARMA extension soon on arXiv)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Motivation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Box-Jenkins.
+ Global stationarity
+\series default
+\color inherit
+ is restrictive.
+ 
+\series bold
+\color blue
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Differencing
+\series default
+\color inherit
+.
+ Information loss.
+ Overdifferencing.
+ Levels are non-stationary.
+ Poor short-run forecasts.
+\series bold
+\color blue
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Data in most recent regime
+\series default
+\color inherit
+.
+ Wasteful.
+ No probability for regime change.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Time-varying parameters
+\series default
+\color inherit
+ has a long history.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doan1984forecasting"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "primiceri2005time"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "prado2010time"
+literal "false"
+
+\end_inset
+
+
+\series bold
+\color blue
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Recently: more realistic parameter evolutions.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gerlach2000efficient"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kalli2014time"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kowal2019dynamic"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "knaus2021shrinkage"
+literal "false"
+
+\end_inset
+
+ 
+\series bold
+\color blue
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parameters can enter 
+\series bold
+\color blue
+explosive region
+\series default
+\color inherit
+ for some periods.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Seasonality
+\series default
+\color inherit
+ is predictable.
+ Model it! Time-varying?
+\series bold
+\color blue
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Time series with 
+\series bold
+\color blue
+multiple seasonal periods
+\series default
+\color inherit
+ is now common.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Multi-seasonal AR models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Seasonal AR(
+\begin_inset Formula $p,P)$
+\end_inset
+
+
+\series default
+\color inherit
+ with season 
+\begin_inset Formula $s$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi_{p}(L)\Phi_{P}(L^{s})(y_{t}-\mu)=\varepsilon_{t},\qquad\varepsilon_{t}\overset{\mathrm{iid}}{\sim}N(0,\sigma^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lag operator: 
+\begin_inset Formula $L^{j}y_{t}=y_{t-j}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Regular 
+\series bold
+\color blue
+lag polynomial
+\series default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+\phi_{p}(L)=1-\phi_{1}L-\ldots-\phi_{p}L^{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Seasonal lag polynomial
+\begin_inset Formula 
+\[
+\Phi_{p}(L^{s})=1-\Phi_{1}L^{s}-\ldots-\Phi_{P}L^{Ps}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Multiple seasonal periods
+\series default
+\color inherit
+, e.g.
+ hourly data with daily, weekly and yearly cycles.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Multi-seasonal AR
+\series default
+\color inherit
+ models with 
+\begin_inset Formula $M$
+\end_inset
+
+ polynomials
+\begin_inset Formula 
+\[
+\prod_{j=1}^{M}\phi_{j}(L^{s_{j}})(y_{t}-\mu)=\varepsilon_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Enforce stability in AR models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/illustration_transformation.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Unrestr.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+~
+\end_layout
+
+\end_inset
+
+params 
+\series default
+\color inherit
+
+\begin_inset Formula $\theta_{k}\in\mathbb{R}$
+\end_inset
+
+
+\begin_inset Formula $\;\Rightarrow$
+\end_inset
+
+ 
+\series bold
+\color blue
+Partial autocorr
+\series default
+\color inherit
+ 
+\begin_inset Formula $r_{k}\in(-1,1)^{p}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+r_{k}=\frac{\theta_{k}}{(1+\theta_{k}^{2})^{1/2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Partial autocorrs 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\series bold
+\color blue
+stable AR coeffs
+\series default
+\color inherit
+ 
+\begin_inset Formula $\boldsymbol{\phi}$
+\end_inset
+
+ by a recursion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Barndorff-Nielsen1973"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Same parameterization for all polynomial factors.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Invertibility in MA
+\series default
+\color inherit
+ by the same parameterization.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Uniform distribution over stability region
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Unrestricted parameters 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ have no interpretation.
+ Priors?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Uniform distribution over stability region
+\series default
+\color inherit
+ 
+\begin_inset Formula $\mathbb{S}_{p}$
+\end_inset
+
+ for 
+\begin_inset Formula $\boldsymbol{\phi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/SimUniformStationary.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lemma: If, independently,
+\begin_inset Formula 
+\[
+\theta_{k}\sim\begin{cases}
+t\big(k+1,0,\frac{1}{\sqrt{k+1}}\big) & \text{ if }k\text{ is odd}\\
+t_{\mathrm{skew}}\big(\frac{k}{2},\frac{k+2}{2},0,\frac{1}{\sqrt{k+1}}\big) & \text{ if }k\text{ is even},
+\end{cases}
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $\boldsymbol{\phi}=(\phi_{1},\ldots,\phi_{p})^{\top}$
+\end_inset
+
+ is uniformly distributed over 
+\begin_inset Formula $\mathbb{S}_{p}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Time-varying multi-seasonal AR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Time-varying multi-seasonal AR
+\begin_inset Formula 
+\[
+\prod_{j=1}^{M}\phi_{jt}(L^{s_{j}})(y_{t}-\mu_{t})=\varepsilon_{t}\qquad\varepsilon_{t}\overset{\mathrm{iid}}{\sim}N(0,\sigma_{t}^{2})
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\phi_{jkt}$
+\end_inset
+
+ is 
+\begin_inset Formula $k$
+\end_inset
+
+th AR parameter in 
+\begin_inset Formula $j$
+\end_inset
+
+th polynomial at time 
+\begin_inset Formula $t.$
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{\phi}_{t}=(\phi_{1t},\ldots,\phi_{p_{j}t})^{\top}$
+\end_inset
+
+ parameters in AR polynomial at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{\boldsymbol{\phi}}_{t}=\boldsymbol{g}(\boldsymbol{\theta}_{t})$
+\end_inset
+
+ map from unrestricted 
+\begin_inset Formula $\boldsymbol{\theta}_{t}$
+\end_inset
+
+ to stable 
+\begin_inset Formula $\boldsymbol{\phi}_{t}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Dynamic shrinkage process priors for TVSAR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Dynamic shrinkage process
+\series default
+\color inherit
+ prior 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kowal2019dynamic"
+literal "false"
+
+\end_inset
+
+ for TVSAR
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{\phi}_{t} & =\boldsymbol{g}(\boldsymbol{\theta}_{t})\\
+\theta_{kt} & =\theta_{k,t-1}+\nu_{kt},\hspace{3.2cm}\nu_{kt}\overset{\mathrm{indep}}{\sim}N\left(0,\exp(h_{kt})\right)\\
+h_{kt} & =\mu_{k}+\kappa_{k}(h_{k,t-1}-\mu_{k})+\eta_{kt},\qquad\eta_{kt}\overset{\mathrm{iid}}{\sim}Z(1/2,1/2,0,1)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset VSpace 0.01cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Global log-volatility
+\series default
+\color inherit
+ 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Local log-volatility
+\series default
+\color inherit
+ 
+\begin_inset Formula $\eta_{kt}$
+\end_inset
+
+ from heavy-tailed 
+\begin_inset Formula $Z$
+\end_inset
+
+-distr.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Constant periods, periods of rapid change and jumps.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Time-series extension of 
+\series bold
+\color blue
+horseshoe prior
+\series default
+\color inherit
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "carvalho2010horseshoe"
+literal "false"
+
+\end_inset
+
+, since for 
+\begin_inset Formula $\kappa=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{Var}(\nu_{t})=\exp(h_{t})=\exp(\mu)\exp(\eta_{t})=\tau^{2}\lambda_{t}^{2}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\eta_{t}\sim Z(1/2,1/2,0,1)\;\Longrightarrow\;\lambda_{t}=\exp(\eta_{t}/2)\sim C^{+}(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Dynamic shrinkage process priors for TVSAR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/simulatelocalARMA.png
+	lyxscale 50
+	scale 27
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Conditional likelihood function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Multi-seasonal TVSAR can be expressed as 
+\series bold
+\color blue
+regression
+\series default
+\color inherit
+ with 
+\series bold
+\color blue
+nonlinear restrictions
+\series default
+\color inherit
+ by multiplying out polynomials in 
+\begin_inset Formula 
+\[
+\prod_{j=1}^{M}\phi_{jt}(L^{s_{j}})y_{t}=\varepsilon_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Example (static case):
+\begin_inset Formula 
+\[
+(1-\phi_{1}L)(1-\Phi_{1}L^{s})y_{t}=(1-\phi_{1}L-\Phi_{1}L^{s}+\phi_{1}\Phi_{1}L^{1+s})y_{t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{t}=\boldsymbol{x}_{t}^{\top}\tilde{\boldsymbol{\phi}}+\varepsilon_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{x}_{t}=(y_{t-1},y_{t-s},y_{t-(1+s)})^{\top}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tilde{\boldsymbol{\phi}}=(\phi_{1},\Phi_{1},{\color{orange}\phi_{1}\Phi_{1}})^{\top}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lags 
+\begin_inset Formula $2,\ldots,s-1$
+\end_inset
+
+ have zero coefficients.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Bayesian inference TVSAR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+TVSAR
+\series default
+\color inherit
+ with conditional likelihood:
+\begin_inset Formula 
+\begin{align*}
+y_{t} & =\boldsymbol{x}_{t}^{\top}\boldsymbol{\tilde{\phi}}_{t}+\varepsilon_{t}\hspace{1.7cm}\hspace{0.5cm}\hspace{0.6cm}\varepsilon_{t}\overset{\mathrm{indep}}{\sim}N(0,\sigma_{t}^{2})\\
+\boldsymbol{\tilde{\phi}}_{t} & =\tilde{\boldsymbol{g}}(\boldsymbol{\theta}_{t})\\
+\boldsymbol{\theta}_{t} & =\boldsymbol{\theta}_{t-1}+\boldsymbol{\nu}_{t},\hspace{2.7cm}\boldsymbol{\nu}_{t}\overset{\mathrm{indep}}{\sim}N\left(0,\mathrm{Diag}(\exp(\boldsymbol{h}_{t}))\right)\\
+\boldsymbol{h}_{t} & =\boldsymbol{\mu}+\boldsymbol{\kappa}(\boldsymbol{h}_{t-1}-\boldsymbol{\mu})+\boldsymbol{\eta}_{t},\qquad\eta_{kt}\overset{\mathrm{iid}}{\sim}Z(1/2,1/2,0,1)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Aim: posterior conditional on time series 
+\begin_inset Formula $y_{1:T}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p(\boldsymbol{\theta}_{0:T},\boldsymbol{h}_{1:T},\boldsymbol{\mu},\boldsymbol{\kappa},\sigma_{1:T}\vert y_{1:T})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Gibbs sampling by data augmentation:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mixture of normal for 
+\begin_inset Formula $\log\chi_{1}^{2}$
+\end_inset
+
+ for volatility 
+\begin_inset Formula $\boldsymbol{h}_{0:T}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kim1998stochastic"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Polya-Gamma augmentation for 
+\begin_inset Formula $Z$
+\end_inset
+
+-distribution.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kowal2019dynamic"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+After´ augmentation: 
+\series bold
+\color blue
+transition model is linear Gaussian
+\series default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Bayesian inference TVSARMA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+TVSARMA
+\series default
+\color inherit
+ with exact likelihood:
+\begin_inset Formula 
+\begin{align*}
+y_{t} & =\boldsymbol{x}_{t}^{\top}\boldsymbol{\tilde{\phi}}_{t}+\textcolor{orange}{\boldsymbol{z}_{t}^{\top}\boldsymbol{\tilde{\psi}}_{t}}+\varepsilon_{t},\hspace{1cm}\varepsilon_{t}\overset{\mathrm{indep}}{\sim}N(0,\sigma_{t}^{2})\\
+(\boldsymbol{\tilde{\phi}}_{t},\textcolor{orange}{\boldsymbol{\tilde{\psi}}_{t}}) & =\tilde{\boldsymbol{g}}(\boldsymbol{\theta}_{t})\\
+\boldsymbol{\theta}_{t} & =\boldsymbol{\theta}_{t-1}+\boldsymbol{\nu}_{t},\hspace{2.5cm}\boldsymbol{\nu}_{t}\overset{\mathrm{indep}}{\sim}N\left(0,\mathrm{Diag}(\exp(\boldsymbol{h}_{t}))\right)\\
+\boldsymbol{h}_{t} & =\boldsymbol{\mu}+\boldsymbol{\kappa}(\boldsymbol{h}_{t-1}-\boldsymbol{\mu})+\boldsymbol{\eta}_{t},\quad\eta_{kt}\overset{\mathrm{iid}}{\sim}Z(1/2,1/2,0,1)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Add Gibbs update steps for 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+past disturbances: 
+\begin_inset Formula $\boldsymbol{z}_{t}=(\varepsilon_{t-1},\varepsilon_{t-s},\varepsilon_{t-(1+s)})^{\top}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+pre-sample lags: 
+\begin_inset Formula $y_{0},y_{-1},y_{-2}$
+\end_inset
+
+,...
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Sampling from conditional posterior for 
+\begin_inset Formula $\boldsymbol{\boldsymbol{\theta}}_{0:T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Full conditional posterior for 
+\begin_inset Formula $\boldsymbol{\theta}_{0:T}$
+\end_inset
+
+: 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+state-space model with state vector 
+\begin_inset Formula $\boldsymbol{\theta}_{t}.$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+nonlinear
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+Gaussian observation model
+\series default
+\color inherit
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Linear (heteroscedastic) Gaussian state transition.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Particle Gibbs with Ancestor Sampling
+\series default
+\color inherit
+ (
+\series bold
+\color blue
+PGAS
+\series default
+\color inherit
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lindsten@2014PGAS"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+simulation consistent
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+slow
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+particle degeneracy when model is near-degenerate
+\series default
+ (parameters standing still for extended periods).
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+FFBSx - FFBS with extended Kalman filter
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+fast
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+robust to near-degeneracy
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+approximate, but shown to be very accurate for TVSAR
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+automatic differentiation
+\series default
+\color inherit
+ 
+\begin_inset Formula $\tilde{\boldsymbol{\phi}}_{t}=\tilde{\boldsymbol{g}}(\boldsymbol{\theta}_{t})$
+\end_inset
+
+ makes it all beautiful.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Extended Kalman filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+State-space model
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{\theta}_{t} & =\boldsymbol{A}\boldsymbol{\theta}_{t-1}+\boldsymbol{B}\boldsymbol{u}_{t}+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
+y_{t} & =\textcolor{orange}{\boldsymbol{C}(\boldsymbol{\theta}_{t})}+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
+\end{align*}
+
+\end_inset
+
+
+\series bold
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Standard Kalman filter
+\series default
+
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/KalmanUpdate.png
+	scale 33
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align left
+
+\series bold
+Extended Kalman filter
+\series default
+
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/KalmanExtended.png
+	scale 33
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Simulation TVSAR with 
+\begin_inset Formula $\boldsymbol{p}=(2,2)$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{s}=(1,12)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1FFBSxmThreeParam.png
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1PGASThreeParam.png
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+PGAS - larger offset improves convergence
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Volatility models
+\begin_inset Formula 
+\begin{align*}
+\nu_{t} & =\exp(h_{t}/2)\epsilon_{t},\qquad\epsilon_{t}\sim N(0,1)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The usual trick
+\begin_inset Formula 
+\[
+\log(\nu_{t}^{2}\textcolor{orange}{+\text{\,offset)}}=h_{t}+\log\epsilon_{t}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1ConvergeEps_updateRates.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1ConvergeKowal_updateRates.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1Converge_10-6_updateRates.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+PGAS - but makes parameters more wiggly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1_paramPostOffsets.pdf
+	lyxscale 50
+	scale 34
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Spectral density ARMA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.6\\textwidth]{figs/spectralARMAwidget.png}"
+target "https://observablehq.com/@mattiasvillani/spectral-density-arma-simplified"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitting the time-varying spectral density
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Benchmark models are linear:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fit 
+\begin_inset Formula $y_{t}=\boldsymbol{z}_{t}^{\top}\tilde{\boldsymbol{\phi_{t}}}+\varepsilon_{t}$
+\end_inset
+
+ with zero restrictions
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Coeff on lag 
+\begin_inset Formula $x_{t-(1+s)}$
+\end_inset
+
+ fitted without multiplicative restriction.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Time-varying spectral density
+\series default
+\color inherit
+ 
+\begin_inset Formula $f(\omega,t)$
+\end_inset
+
+.
+ Spectrogram.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+MSE of log spectrogram estimate: 
+\begin_inset Formula $\widehat{\log f(\omega,t)}$
+\end_inset
+
+ integrated over frequency 
+\begin_inset Formula $\omega\in(0,\pi]$
+\end_inset
+
+ and time 
+\begin_inset Formula $t=1,\ldots,1000$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Julia/dev/LocalMultiSAR.jl/sim/Experiment1/figs/Experiment1MSE.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitted log spectrogram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/Exp1SpectralHeatmap.pdf
+	lyxscale 50
+	scale 27
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitted log spectrogram snapshots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/specdenscutshard.png
+	lyxscale 50
+	scale 19
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitted log spectrogram snapshots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/SpectralDensOverFreq2.png
+	lyxscale 50
+	scale 15.5
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitted log spectral density over time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/SpecOverTime1.png
+	lyxscale 50
+	scale 19
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fitted log spectral density over time
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/SpectralDensityOverTime2.png
+	lyxscale 50
+	scale 15.5
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+US industrial production 1919-2024
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Julia/dev/LocalMultiSAR.jl/realdata/usip/figs/usip_data_raw.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Julia/dev/LocalMultiSAR.jl/realdata/usip/figs/usip_data_detrended.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+SAR(1,2) - FFBSx three random initial values
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/usipSAR12_param_FFBSx-mparamPostThreeRuns.pdf
+	lyxscale 50
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+SAR(1,2) spectral density snapshots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.65\\textwidth]{/figs/usiptvspectal.png}"
+target "https://observablehq.com/@mattiasvillani/time-varying-spectral-us-indprod"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Multi-seasonal AR
+\series default
+\color inherit
+ model with 
+\series bold
+\color blue
+time-varying
+\series default
+\color inherit
+ parameters.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Stability restrictions at every time point.
+ 
+\series bold
+\color blue
+Locally stable
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parameter evolution by 
+\series bold
+\color blue
+dynamic shrinkage processes
+\series default
+\color inherit
+.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Challenging inference problem:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+non-linear
+\series default
+\color inherit
+ - stability restrictions and multiplicative seasonality
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+dynamic shrinkage prior tends to give 
+\series bold
+\color blue
+near-degeneracy
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gibbs sampler with 
+\series bold
+\color blue
+particle/extended Kalman update
+\series default
+\color inherit
+ step.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In progress: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Beyond Extended Kalman.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Better prior eliciatation and posterior sampling for DSP prior.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Graphics
+	filename ../ESOBE2024/figs/julia.png
+	lyxscale 2
+	scale 2.5
+
+\end_inset
+
+ package for arbitrary number of polynomials.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "../ESOBE2024/localarma_ref"
+options "bibtotoc,ieeetr"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
