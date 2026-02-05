@@ -61,6 +61,9 @@ coltitle=black,center title}}
 \definecolor{verylightgray}{RGB}{246, 246, 246}
 \definecolor{cobalt}{HTML}{0047AB}
 \definecolor{lightsteelblue}{HTML}{b0c4de}
+\definecolor{midgreen}{rgb}{0.0,0.6,0.3}
+\definecolor{steelblue}{rgb}{0.27,0.51,0.71}
+
 
 \definecolor{shadecolor}{rgb}{236, 236, 236}
 
@@ -263,7 +266,7 @@ status open
 
 \series bold
 \color orange
-Workshop overview
+Taxonomy of state-space models
 \end_layout
 
 \end_inset
@@ -276,61 +279,68 @@ Workshop overview
 
 \series bold
 \color blue
-Time-varying parameter models and state-space models
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Inference in linear Gaussian models
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Inference in non-linear and non-Gaussian models
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Global-local shrinkage processes for more realistic parameter evolution
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color blue
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Light 
-\series bold
-\color blue
-demos
+Linear Gaussian
 \series default
 \color inherit
-,
- using packages in R.
+ models
+\begin_inset Formula 
+\begin{align*}
+\text{Measurement model: \hspace{0.3cm}}\boldsymbol{y}_{t} & =\boldsymbol{\boldsymbol{C}}\boldsymbol{z}_{t}+\boldsymbol{\varepsilon}_{t},\hspace*{1.15cm}\boldsymbol{\varepsilon}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\varepsilon})\\
+\text{\text{Transition model:\hspace{1cm}}}\boldsymbol{z}_{t} & =\boldsymbol{A}\boldsymbol{z}_{t-1}+\boldsymbol{\eta}_{t},\qquad\boldsymbol{\eta}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Non-linear
+\series default
+\color inherit
+ (additive) 
+\series bold
+\color blue
+Gaussian
+\series default
+\color inherit
+ models
+\begin_inset Formula 
+\begin{align*}
+\text{Measurement model:\hspace{0.3cm}}\boldsymbol{y}_{t} & =\boldsymbol{C}(\boldsymbol{z}_{t})+\boldsymbol{\varepsilon}_{t},\hspace*{1.15cm}\boldsymbol{\varepsilon}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\varepsilon})\\
+\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & =\boldsymbol{A}(\boldsymbol{z}_{t-1})+\boldsymbol{\eta}_{t},\qquad\boldsymbol{\eta}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+General distribution
+\series default
+\color inherit
+ (non-linear and non-Gaussian) models
+\begin_inset Formula 
+\begin{align*}
+\text{Measurement model:\hspace{0.3cm}}\boldsymbol{y}_{t} & \sim p(\boldsymbol{y}_{t}\vert\boldsymbol{z}_{t})\\
+\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & \sim p(\boldsymbol{z}_{t}\vert\boldsymbol{z}_{t-1})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hybrids:
+ nonlinear measurement + linear Gaussian transition.
 \end_layout
 
 \end_deeper
@@ -349,7 +359,7 @@ status open
 
 \series bold
 \color orange
-Structure of the talk
+Poisson time series for counts
 \end_layout
 
 \end_inset
@@ -359,11 +369,1177 @@ Structure of the talk
 
 \begin_deeper
 \begin_layout Itemize
-ththsh
+
+\series bold
+\color blue
+Poisson model with time-varying intensity
+\series default
+\color inherit
+
+\begin_inset Formula 
+\begin{align*}
+y_{t}\vert z_{t} & \sim\mathrm{Poisson}\big(\exp(z_{t})\big)\\
+z_{t} & =\mu+\phi(z_{t-1}-\mu)+\eta_{t},\qquad\eta_{t}\overset{\mathrm{iid}}{\sim}N(0,\sigma_{\eta}^{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.4\\textwidth]{./figs/poisson_timeseries_widget.png}"
+target "https://observablehq.com/@mattiasvillani/poisson-time-series-model"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Common Bayesian computational approaches
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kalman
+\series default
+\color inherit
+ filtering and 
+\series bold
+\color blue
+FFBS
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+sampling
+\series default
+\color inherit
+ for linear Gaussian models.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "carter1994gibbs,fruhwirth1994data"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-gsgdfg
+
+\series bold
+\color blue
+Particle MCMC
+\series default
+\color inherit
+ and 
+\series bold
+\color blue
+SMC 
+\series default
+\color inherit
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chopin2020introduction"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Hamiltonian Monte Carlo
+\series default
+\color inherit
+ (Stan/Turing.jl) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "neal2011mcmc"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Variational approximations
+\series default
+\color inherit
+ 
+\color black
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tan2018gaussian"
+literal "false"
+
+\end_inset
+
+
+\color inherit
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+INLA
+\series default
+\color inherit
+ 
+\color black
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rue2009approximate"
+literal "false"
+
+\end_inset
+
+
+\color inherit
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Gaussian approximations
+\series default
+\color inherit
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sarkka2023bayesian"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Particle filters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Approximate filtering posteriors by 
+\series bold
+\color blue
+weighted particle system
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+\hat{p}(\boldsymbol{z}_{t}\vert\boldsymbol{y}_{1:t})=\sum_{j=1}^{M}\omega_{t}^{(j)}\delta_{\boldsymbol{z}_{t}^{(j)}}(\boldsymbol{z}_{t})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sequential importance sampling
+\series default
+\color inherit
+ moves particles over time.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Bootstrap filter
+\series default
+\color inherit
+:
+ importance density is the prior at time 
+\begin_inset Formula $t$
+\end_inset
+
+:
+ 
+\begin_inset Formula 
+\[
+q(\boldsymbol{z}_{t}\vert\boldsymbol{y}_{1:t})=p(\boldsymbol{z}_{t}\vert\boldsymbol{y}_{1:t-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/mv/Dropbox/BayesBook/Figs/WeightedDeltaSystem.pdf
+	lyxscale 50
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/BayesBook/Figs/Particles3D.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+The Bootstrap filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/bootstrap.png
+	lyxscale 30
+	scale 14
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Particle Gibbs with Ancestor Sampling (PGAS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Particle Gibbs samples from the joint smoothing posterior 
+\begin_inset Formula $p(\boldsymbol{z}_{1:T}\vert\boldsymbol{y}_{1:T},\boldsymbol{\theta})$
+\end_inset
+
+ via a particle filter inside a Gibbs sampler.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "andrieu2010particle"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Conditional particle filter
+\series default
+\color inherit
+ that conditions on a 
+\series bold
+\color blue
+reference particle trajectory
+\series default
+\color inherit
+ from the previous Gibbs iteration.
+ 
+\end_layout
+
+\begin_layout Itemize
+Markov kernel that leaves the target posterior invariant.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Partially collapsed (SMC randomness integrated out).
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Extended target with state + SMC randomness.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Particle Gibbs with Ancestor Sampling
+\series default
+\color inherit
+ (
+\series bold
+\color blue
+PGAS
+\series default
+\color inherit
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lindsten@2014PGAS"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Resamples the reference particle ancestor at every time step.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mitigates degeneracy and gives better mixing.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Smaller number of particles needed,
+ but more costly.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Extended Kalman filter (EKF)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+State-space model
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{\theta}_{t} & =\textcolor{orange}{\boldsymbol{a}(\boldsymbol{\theta}_{t-1})}+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
+y_{t} & =\textcolor{orange}{\boldsymbol{c}(\boldsymbol{\theta}_{t})}+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Linearized model
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{\theta}_{t} & =\boldsymbol{a}'(\boldsymbol{\theta}_{t-1})+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
+y_{t} & =\boldsymbol{c}'(\boldsymbol{\theta}_{t})+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Standard Kalman filter
+\series default
+
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/ESOBE2024/figs/KalmanUpdate.png
+	scale 32
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align left
+
+\series bold
+Extended Kalman filter
+\series default
+
+\begin_inset VSpace -0.7cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/ESOBE2024/figs/KalmanExtended.png
+	scale 32
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Extended Kalman filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/Ecosta2025/figs/EKFapprox_small.png
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/Ecosta2025/figs/EKFapprox_moderate.png
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/Ecosta2025/figs/EKFapprox_moderate_poorpoint.png
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+FFBS-EKF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+EKF:
+ 
+\series bold
+\color blue
+automatic differentiation
+\series default
+\color inherit
+ makes it all easy.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Forward filtering with EKF gives 
+\begin_inset Formula $\boldsymbol{\mu}_{t\vert t},\boldsymbol{\Omega}_{t\vert t},\boldsymbol{\mu}_{t\vert t-1},\boldsymbol{\Omega}_{t\vert t-1}$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sampling from joint smoothing density 
+\series default
+\color inherit
+by backward sampling using same multivariate normal distributions as in FFBS.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Much faster than PGAS.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Robust to near-degeneracy
+\series default
+\color inherit
+ in the transition model.
+ Important when global-local shrinkage process priors is used for the parameter evolution.
+ See Lecture 4.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Alternative approximate Gaussian filtering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Moment matching
+\series default
+\color inherit
+ by numerical integration.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sarkka2023bayesian"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Unscented Kalman Filter
+\series default
+\color inherit
+ (
+\series bold
+\color blue
+UKF
+\series default
+\color inherit
+):
+ map sigma points through nonlinear transition and measurement functions.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "julier2004unscented"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Iterated EKF
+\series default
+\color inherit
+ and 
+\series bold
+\color blue
+Iterated UKF
+\series default
+\color inherit
+:
+ expands around posterior mean instead of prior mean.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "skoglund2015extended,skoglund2019iterative"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Iterated EKF/UKF with 
+\series bold
+\color blue
+line search
+\series default
+\color inherit
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "skoglund2015extended,skoglund2019iterative"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Prior Linearization filter
+\series default
+\color inherit
+.
+ Linearizes 
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{c}(\boldsymbol{x})$
+\end_inset
+
+ by minimizing 
+\begin_inset Formula $\mathbb{E_{\mathrm{prior}}}\left(\left\Vert \boldsymbol{c}(\boldsymbol{x})-(\boldsymbol{c}_{0}+\boldsymbol{C}\boldsymbol{x})\right\Vert ^{2}\right)$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garcia2015posterior"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Posterior linearization filter
+\series default
+\color inherit
+ minimizes 
+\begin_inset Formula $\mathbb{E_{\mathrm{post}}}\left(\left\Vert \boldsymbol{c}(\boldsymbol{x})-(\boldsymbol{c}_{0}+\boldsymbol{C}\boldsymbol{x})\right\Vert ^{2}\right)$
+\end_inset
+
+ by iterating.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garcia2015posterior"
+literal "false"
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Laplace approximation
+\series default
+\color inherit
+:
+ approximates by posterior mode and inverse negative Hessian.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "koyama2010approximate"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Gaussian approximations to bivariate log-normal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/Ecosta2025/figs/UKFapprox_landscape.pdf
+	scale 27
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Seasonal AR - without stability restrictions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/SAR_3.pdf
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute time 
+\begin_inset Formula $10000$
+\end_inset
+
+ draws:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+PGAS(100):
+ 211.71 sec
+\end_layout
+
+\begin_layout Itemize
+FFBS-EKF:
+ 11.92 sec
+\end_layout
+
+\begin_layout Itemize
+FFBS-UKF:
+ 14.72 sec
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Seasonal AR - with stability restrictions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/StableSAR_3.pdf
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This can be improved by alternative stability parameterizations.
 \end_layout
 
 \end_deeper

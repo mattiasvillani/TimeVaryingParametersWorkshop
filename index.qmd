@@ -48,20 +48,20 @@ It is not necessary to bring your own laptop, but if you want to follow along in
 ------------------------------------------------------------------------
 
 **Lecture 1 - Time-varying parameter models and state-space models**<br> 
-Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides](slides/TimeVaryingParameters1.pdf)<br>
+Reading: [Bayesian Learning - Chapter 17.1-17.2](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides](slides/TimeVaryingParameters1.pdf)<br>
 Interactivity: [local level](https://observablehq.com/@mattiasvillani/local-level-model) | [local trend](https://observablehq.com/@mattiasvillani/local-trend-model) | [time-varying regression](https://observablehq.com/@mattiasvillani/time-varying-regression-model) 
 
 **Lecture 2 - Inference in linear Gaussian models**<br> 
-Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides - TBA]()<br>
+Reading: [Bayesian Learning - Chapter 17.3-17.6](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides](slides/TimeVaryingParameters2.pdf)<br>
 Code: [demo of the `dlm` package in R](demos/dlm_package.qmd)<br>
 Interactivity: [filtering local level](https://observablehq.com/@mattiasvillani/kalman-filter-simulated-local-level) | [nile river data](https://observablehq.com/@mattiasvillani/kalman-filtering-nile-river-data)
 
 **Lecture 3 - Inference in non-linear and non-Gaussian models**<br> 
-Reading: [Slides - TBA]()<br>
+Reading: [Bayesian Learning - Chapter 17.7-17.8](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides](slides/TimeVaryingParameters3.pdf)<br>
 Interactivity: [poisson time series](https://observablehq.com/@mattiasvillani/poisson-time-series-model) | [stochastic volatility](https://observablehq.com/@mattiasvillani/stochastic-volatility-time-series-model)
 
 **Lecture 4 - Global-local shrinkage processes for more realistic parameter evolutions**<br> 
-Reading: [Slides - TBA]()<br>
+Reading: [Slides](slides/TimeVaryingParameters4.pdf)<br>
 Interactivity: [local level model with dsp prior](https://observablehq.com/@mattiasvillani/local-level-model-dsp-prior) | [poisson with dsp prior](https://observablehq.com/@mattiasvillani/time-varying-poisson-dsp)
 
 **Computer lab**<br>

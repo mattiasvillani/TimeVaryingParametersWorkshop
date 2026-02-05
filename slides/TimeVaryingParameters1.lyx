@@ -1383,8 +1383,8 @@ Gaussian
  models
 \begin_inset Formula 
 \begin{align*}
-\text{Measurement model:\hspace{0.3cm}}\boldsymbol{y}_{t} & =\boldsymbol{c}(\boldsymbol{z}_{t})+\boldsymbol{\varepsilon}_{t},\hspace*{1.15cm}\boldsymbol{\varepsilon}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\varepsilon})\\
-\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & =\boldsymbol{a}(\boldsymbol{z}_{t-1})+\boldsymbol{\eta}_{t},\qquad\boldsymbol{\eta}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})
+\text{Measurement model:\hspace{0.3cm}}\boldsymbol{y}_{t} & =\boldsymbol{C}(\boldsymbol{z}_{t})+\boldsymbol{\varepsilon}_{t},\hspace*{1.15cm}\boldsymbol{\varepsilon}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\varepsilon})\\
+\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & =\boldsymbol{A}(\boldsymbol{z}_{t-1})+\boldsymbol{\eta}_{t},\qquad\boldsymbol{\eta}_{t}\overset{\mathrm{iid}}{\sim}N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})
 \end{align*}
 
 \end_inset

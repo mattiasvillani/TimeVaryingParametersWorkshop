@@ -874,6 +874,358 @@ literal "true"
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Poisson time series with dynamic shrinkage process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.65\\textwidth]{./figs/poisson_dsp_widget.png}"
+target "https://observablehq.com/@mattiasvillani/time-varying-poisson-dsp"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Stable seasonal AR with DSP prior
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Time-varying Seasonal AR(
+\begin_inset Formula $p,P)$
+\end_inset
+
+
+\series default
+\color inherit
+ with season 
+\begin_inset Formula $s$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fagerberg2024time"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi_{p,t}(L)\Phi_{P,t}(L^{s})y_{t}=\varepsilon_{t},\qquad\varepsilon_{t}\overset{\mathrm{iid}}{\sim}N(0,\sigma_{t}^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parameters 
+\begin_inset Formula $\phi_{1,t},\ldots,\phi_{p,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi_{1,t},\ldots,\Phi_{P,t}$
+\end_inset
+
+ follow DSP priors.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Can be directly extended to multi-seasonal AR.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Two non-linearities:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Multiplicative structure
+\series default
+\color inherit
+ of regular and seasonal polynomials.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Stability restrictions
+\series default
+\color inherit
+ at every 
+\begin_inset Formula $t$
+\end_inset
+
+ (non-linear recursive).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+PGAS performs poorly due to near-degeneracy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/ESOBE2024/figs/Exp1FFBSxmThreeParam.png
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Seminars/ESOBE2024/figs/Exp1PGASThreeParam.png
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+US industrial production 1919-2024
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/usip_data_raw.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/usip_data_detrended.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Posterior with homoscedastic Gaussian evolution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/usipSAR12_param_FFBSx-mparamPost_gaussianWithSV.pdf
+	lyxscale 50
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Posterior with DSP evolution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/usipSAR12_param_FFBSx-mparamPostWithSV.pdf
+	lyxscale 50
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex

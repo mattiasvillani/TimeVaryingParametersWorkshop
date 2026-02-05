@@ -1203,7 +1203,7 @@ State is Markov
 \begin_inset Formula $\boldsymbol{z}_{t-1}$
 \end_inset
 
-
+)
 \begin_inset Formula 
 \[
 p(\boldsymbol{z}_{0},\boldsymbol{z}_{1},\ldots,\boldsymbol{z}_{T})=p(\boldsymbol{z}_{0})\prod_{t=1}^{T}p(\boldsymbol{z}_{t}\vert\boldsymbol{z}_{t-1})

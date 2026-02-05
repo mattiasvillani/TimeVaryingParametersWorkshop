@@ -835,7 +835,7 @@ Markov kernel that leaves the target posterior invariant.
 \end_layout
 
 \begin_layout Itemize
-Extended target with state + SMC randomness.
+Partially collapsed (SMC randomness integrated out).
 \begin_inset VSpace medskip
 \end_inset
 
@@ -843,7 +843,7 @@ Extended target with state + SMC randomness.
 \end_layout
 
 \begin_layout Itemize
-Partially collapsed (SMC randomness integrated out).
+Extended target with state + SMC randomness.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -1211,7 +1211,7 @@ status open
 
 \series bold
 \color orange
-Alternative approximate Gaussian filtering
+Approximate Gaussian filtering
 \end_layout
 
 \end_inset
@@ -1405,6 +1405,21 @@ literal "false"
 
 \end_layout
 
+\begin_layout Itemize
+PGAS(100):
+ 211.71 sec
+\end_layout
+
+\begin_layout Itemize
+EKF:
+ 11.92 sec
+\end_layout
+
+\begin_layout Itemize
+UKF:
+ 14.72 sec
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -1439,107 +1454,6 @@ Gaussian approximations to bivariate log-normal
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Seasonal AR - without stability restrictions
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/SAR_3.pdf
-	scale 38
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Compute time 
-\begin_inset Formula $10000$
-\end_inset
-
- draws:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-PGAS(100):
- 211.71 sec
-\end_layout
-
-\begin_layout Itemize
-FFBS-EKF:
- 11.92 sec
-\end_layout
-
-\begin_layout Itemize
-FFBS-UKF:
- 14.72 sec
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Seasonal AR - with stability restrictions
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/StableSAR_3.pdf
-	scale 38
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-This can be improved by alternative stability parameterizations.
 \end_layout
 
 \end_deeper
