@@ -48,7 +48,7 @@ It is not necessary to bring your own laptop, but if you want to follow along in
 ------------------------------------------------------------------------
 
 **Lecture 1 - Time-varying parameter models and state-space models**<br> 
-Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides - TBA]()<br>
+Reading: [Bayesian Learning - Chapter 17](https://github.com/mattiasvillani/BayesianLearningBook/raw/main/pdf/BayesBook.pdf) | [Slides](slides/TimeVaryingParameters1.pdf)<br>
 Interactivity: [local level](https://observablehq.com/@mattiasvillani/local-level-model) | [local trend](https://observablehq.com/@mattiasvillani/local-trend-model) | [time-varying regression](https://observablehq.com/@mattiasvillani/time-varying-regression-model) 
 
 **Lecture 2 - Inference in linear Gaussian models**<br> 

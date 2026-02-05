@@ -168,7 +168,7 @@ coltitle=black,center title}}
 
 \size largest
 \color orange
-Time-varying parameter models and state-space models 
+Time-varying parameter models as state-space models 
 \size default
 
 \begin_inset Argument 1
@@ -637,7 +637,7 @@ Local level model is a special case with a intercept-only model.
 \begin_layout Itemize
 Time-varying autoregressive (AR) models.
  Covariates 
-\begin_inset Formula $\boldsymbol{x}_{t}=(y_{t-1},\ldots,y_{t-p})$
+\begin_inset Formula $\boldsymbol{x}_{t}=(y_{t-1},\ldots,y_{t-p})^{\top}$
 \end_inset
 
 .
@@ -709,6 +709,97 @@ status open
 LatexCommand href
 name "\\includegraphics[width=0.7\\textwidth]{./figs/TimeVaryingRegression.png}"
 target "https://observablehq.com/@mattiasvillani/time-varying-regression-model"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Stochastic volatility
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Stochastic volatility 
+\series default
+\color inherit
+model with a time-varying variance
+\begin_inset Formula 
+\begin{align*}
+y_{t} & =\mu_{y}+\varepsilon_{t},\qquad\varepsilon_{t}\sim N\big(0,\textcolor{orange}{\exp(z_{t})}\big)\\
+z_{t} & =\mu_{z}+\phi(z_{t-1}-\mu_{z})+\eta_{t},\qquad\eta_{t}\overset{\mathrm{iid}}{\sim}N(0,\sigma_{\eta}^{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This is a 
+\series bold
+\color blue
+non-linear model
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.4\\textwidth]{./figs/sv_widget.png}"
+target "https://observablehq.com/@mattiasvillani/stochastic-volatility-time-series-model"
 literal "true"
 
 \end_inset
@@ -994,12 +1085,15 @@ The state can be some interpretable latent process:
 
 \begin_deeper
 \begin_layout Itemize
-potential output in macroeconomics (
+potential output and other 
+\emph on
+stars
+\emph default
+ in economics (
 \begin_inset Formula $\boldsymbol{y}_{t}$
 \end_inset
 
- = production,
- prices)
+ = macro data)
 \begin_inset VSpace medskip
 \end_inset
 
@@ -1011,7 +1105,7 @@ coordinates and velocity of a robot (
 \begin_inset Formula $\boldsymbol{y}_{t}$
 \end_inset
 
- = sensor measurements)
+ = sensor data)
 \begin_inset VSpace medskip
 \end_inset
 
@@ -1020,6 +1114,14 @@ coordinates and velocity of a robot (
 
 \begin_layout Itemize
 continuous intensity for modeling count data
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+latent surface in 2D/3D for modeling spatio-temporal data
 \begin_inset VSpace medskip
 \end_inset
 
