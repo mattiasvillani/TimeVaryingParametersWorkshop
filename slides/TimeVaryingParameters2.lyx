@@ -334,7 +334,7 @@ Filtering posterior
 \color inherit
 :
  
-\begin_inset Formula $p(\boldsymbol{z}_{t}\vert y_{1:t})$
+\begin_inset Formula $p(\boldsymbol{z}_{t}\vert\boldsymbol{y}_{1:t})$
 \end_inset
 
 .
@@ -357,7 +357,7 @@ Smoothing posterior
 \color inherit
 :
  
-\begin_inset Formula $p(\boldsymbol{z}_{t}\vert y_{1:T})$
+\begin_inset Formula $p(\boldsymbol{z}_{t}\vert\boldsymbol{y}_{1:T})$
 \end_inset
 
 .
@@ -380,7 +380,7 @@ Joint smoothing posterior
 \color inherit
 :
  
-\begin_inset Formula $p(\boldsymbol{z}_{1:T}\vert y_{1:T})$
+\begin_inset Formula $p(\boldsymbol{z}_{1:T}\vert\boldsymbol{y}_{1:T})$
 \end_inset
 
 .
@@ -580,7 +580,7 @@ Prior at time
 
 \series bold
 \color blue
-Posterior at time 
+Filtering posterior at time 
 \begin_inset Formula $t$
 \end_inset
 
@@ -864,7 +864,22 @@ R demo using the dlm package
 \begin_deeper
 \begin_layout Itemize
 Quarto notebook:
- qmd | 
+ 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "qmd"
+target "https://github.com/mattiasvillani/TimeVaryingParametersWorkshop/raw/main/demos/dlm_package.qmd"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color inherit
+ | 
 \bar under
 \color blue
 
@@ -877,9 +892,6 @@ literal "false"
 \end_inset
 
 
-\bar default
-\color inherit
-| pdf
 \end_layout
 
 \end_deeper

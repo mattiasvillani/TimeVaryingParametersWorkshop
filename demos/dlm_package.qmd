@@ -5,8 +5,6 @@ editor: visual
 format:
   html:
     toc: true
-  pdf:
-    toc: true
 ---
 
 > This notebook illustrates the use of the dlm package in R. How to set up a state-space model, and how to do Kalman filtering, smoothing and forecasting. The local level model for the well-known Nile river data is used as the running example. The final bonus section shows how the Kalman filter is implemented from scratch in R.

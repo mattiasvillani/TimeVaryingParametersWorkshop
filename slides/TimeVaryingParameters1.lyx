@@ -487,7 +487,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 name "\\includegraphics[width=0.7\\textwidth]{./figs/LocalLevelWidget.png}"
-target "https://observablehq.com/@mattiasvillani/https://observablehq.com/@mattiasvillani/local-level-model"
+target "https://observablehq.com/@mattiasvillani/local-level-model"
 literal "true"
 
 \end_inset
@@ -551,7 +551,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 name "\\includegraphics[width=0.7\\textwidth]{./figs/LocalTrendWidget.png}"
-target "https://observablehq.com/@mattiasvillani/https://observablehq.com/@mattiasvillani/local-trend-model"
+target "https://observablehq.com/@mattiasvillani/local-trend-model"
 literal "true"
 
 \end_inset
@@ -627,7 +627,7 @@ Often
 \end_layout
 
 \begin_layout Itemize
-Local level model is a special case with a intercept-only model.
+Local level model is a special case with intercept-only model.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1403,7 +1403,7 @@ General distribution
 \begin_inset Formula 
 \begin{align*}
 \text{Measurement model:\hspace{0.3cm}}\boldsymbol{y}_{t} & \sim p(\boldsymbol{y}_{t}\vert\boldsymbol{z}_{t})\\
-\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & \sim q(\boldsymbol{z}_{t}\vert\boldsymbol{z}_{t-1})
+\text{Transition model:\hspace{0.85cm}}\boldsymbol{z}_{t} & \sim p(\boldsymbol{z}_{t}\vert\boldsymbol{z}_{t-1})
 \end{align*}
 
 \end_inset
