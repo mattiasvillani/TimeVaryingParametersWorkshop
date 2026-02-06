@@ -400,7 +400,7 @@ window.Quarto = {
 
 
 <blockquote class="blockquote">
-<p>This notebook illustrates the use of the dlm package in R. How to set up a state-space model, and how to do Kalman filtering, smoothing and forecasting. The local level model for the well-known Nile river data is used as the running example. The final bonus section shows how the Kalman filter is implemented from scratch in R.</p>
+<p>This notebook illustrates the use of the <code>dlm</code> package in R. How to set up a state-space model, and how to do Kalman filtering, smoothing and forecasting. The local level model for the well-known Nile river data is used as the running example. The final bonus section shows how the Kalman filter is implemented from scratch in R.</p>
 </blockquote>
 <section id="local-level-model" class="level2">
 <h2 class="anchored" data-anchor-id="local-level-model">Local level model</h2>
@@ -411,7 +411,7 @@ window.Quarto = {
 </section>
 <section id="the-dlm-package-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="the-dlm-package-in-r">The <code>dlm</code> package in R</h2>
-<p>The dlm package uses the following notation for a <strong>state-space model</strong> for a univariate time series <span class="math inline">\(y_t\)</span> with a <em>state</em> vector <span class="math inline">\(\boldsymbol{\theta}_t\)</span>:</p>
+<p>The <code>dlm</code> package uses the following notation for a <strong>state-space model</strong> for a univariate time series <span class="math inline">\(y_t\)</span> with a <em>state</em> vector <span class="math inline">\(\boldsymbol{\theta}_t\)</span>:</p>
 <p><span class="math display">\[
 \begin{align}
 y_t &amp;= \boldsymbol{F} \boldsymbol{\theta}_t + v_t,\hspace{1.5cm} v_t \sim N(\boldsymbol{0},\boldsymbol{v})  \\

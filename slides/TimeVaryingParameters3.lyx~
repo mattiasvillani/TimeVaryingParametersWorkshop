@@ -1063,7 +1063,8 @@ status open
 \align left
 
 \series bold
-Extended Kalman filter
+Extended Kalman filter (linear transition,
+ nonlinear measurement)
 \series default
 
 \begin_inset VSpace -0.7cm
@@ -1525,17 +1526,17 @@ Compute time
 \begin_deeper
 \begin_layout Itemize
 PGAS(100):
- 211.71 sec
+ 211.7 sec
 \end_layout
 
 \begin_layout Itemize
 FFBS-EKF:
- 11.92 sec
+ 11.9 sec
 \end_layout
 
 \begin_layout Itemize
 FFBS-UKF:
- 14.72 sec
+ 14.7 sec
 \end_layout
 
 \end_deeper

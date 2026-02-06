@@ -1048,7 +1048,7 @@ Conditional on
 \begin_inset Formula $\boldsymbol{z}_{0:T}$
 \end_inset
 
- by sampling from posterior in state-space model with:
+ by sampling from posterior in a state-space model with:
 \begin_inset VSpace medskip
 \end_inset
 

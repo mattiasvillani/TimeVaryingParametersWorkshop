@@ -635,7 +635,7 @@ Horseshoe prior
  for time series
 \begin_inset Formula 
 \begin{align*}
-\mu_{t} & =\mu_{t-1}+\nu_{t},\qquad\nu_{t}\sim N(0,\textcolor{blue}{\tau^{2}}\textcolor{orange}{\lambda_{j}^{2}})\\
+\mu_{t} & =\mu_{t-1}+\nu_{t},\qquad\nu_{t}\sim N(0,\textcolor{blue}{\tau^{2}}\textcolor{orange}{\lambda_{t}^{2}})\\
 \lambda_{t} & \overset{\mathrm{iid}}{\sim}C^{+}(0,1)\\
 \tau & \sim C^{+}(0,1)
 \end{align*}

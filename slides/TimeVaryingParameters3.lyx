@@ -966,11 +966,12 @@ Extended Kalman filter (EKF)
 
 \begin_deeper
 \begin_layout Itemize
-State-space model
+State-space model (linear transition,
+ nonlinear measurement)
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{\theta}_{t} & =\textcolor{orange}{\boldsymbol{a}(\boldsymbol{\theta}_{t-1})}+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
-y_{t} & =\textcolor{orange}{\boldsymbol{c}(\boldsymbol{\theta}_{t})}+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
+\boldsymbol{z}_{t} & =\boldsymbol{A}\boldsymbol{z}_{t-1}+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
+y_{t} & =\textcolor{orange}{\boldsymbol{c}(\boldsymbol{z}_{t})}+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
 \end{align*}
 
 \end_inset
@@ -982,8 +983,8 @@ y_{t} & =\textcolor{orange}{\boldsymbol{c}(\boldsymbol{\theta}_{t})}+\varepsilon
 Linearized model
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{\theta}_{t} & =\boldsymbol{a}'(\boldsymbol{\theta}_{t-1})+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
-y_{t} & =\boldsymbol{c}'(\boldsymbol{\theta}_{t})+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
+\boldsymbol{z}_{t} & =\boldsymbol{A}\boldsymbol{z}_{t-1}+\boldsymbol{\eta}_{t},\hspace{1em}\boldsymbol{\eta}_{t}\sim N(\boldsymbol{0},\boldsymbol{\Sigma}_{\eta})\\
+y_{t} & =\boldsymbol{c}'(\boldsymbol{z}_{t})+\varepsilon_{t},\hspace{4.1em}\varepsilon_{t}\sim N(0,\boldsymbol{\Sigma}_{\varepsilon})
 \end{align*}
 
 \end_inset

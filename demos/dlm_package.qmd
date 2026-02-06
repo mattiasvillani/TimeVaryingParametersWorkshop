@@ -7,7 +7,7 @@ format:
     toc: true
 ---
 
-> This notebook illustrates the use of the dlm package in R. How to set up a state-space model, and how to do Kalman filtering, smoothing and forecasting. The local level model for the well-known Nile river data is used as the running example. The final bonus section shows how the Kalman filter is implemented from scratch in R.
+> This notebook illustrates the use of the `dlm` package in R. How to set up a state-space model, and how to do Kalman filtering, smoothing and forecasting. The local level model for the well-known Nile river data is used as the running example. The final bonus section shows how the Kalman filter is implemented from scratch in R.
 
 ## Local level model
 
@@ -21,7 +21,7 @@ which models the observed time series $y_t$ as a mean $\mu_t$ plus a random **me
 
 ## The `dlm` package in R
 
-The dlm package uses the following notation for a **state-space model** for a univariate time series $y_t$ with a *state* vector $\boldsymbol{\theta}_t$:
+The `dlm` package uses the following notation for a **state-space model** for a univariate time series $y_t$ with a *state* vector $\boldsymbol{\theta}_t$:
 
 $$
 \begin{align}
