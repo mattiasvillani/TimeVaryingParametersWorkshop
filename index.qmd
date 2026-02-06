@@ -65,4 +65,5 @@ Reading: [Slides](slides/TimeVaryingParameters4.pdf)<br>
 Interactivity: [local level model with dsp prior](https://observablehq.com/@mattiasvillani/local-level-model-dsp-prior) | [poisson with dsp prior](https://observablehq.com/@mattiasvillani/time-varying-poisson-dsp)
 
 **Computer lab**<br>
-[computer lab - TBA]()
+[lab](StateSpaceLab.zip) <br>
+*Note: this lab was created for another course, but fits nicely with the current the workshop*
